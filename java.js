@@ -12,20 +12,20 @@ function add() {
     li.textContent = addTask.value;
 
 
-  var removeButton = document.createElement('remove');
-  removeButton.textContent = "Remove";
+  var removeButton = document.createElement('button');
+  removeButton.textContent = 'Remove';
   removeButton.className = 'Button';
   removeButton.onclick = function() {
-    workSheet.removeChild('li')
+    workSheet.removeChild(li)
   };
   li.onclick = function () {
-    li.classList.toggle('complete')
+    li.classList.toggle('completed')
   };
 
   li.appendChild('removeButton');
 
 
-  workSheet.appendChild('li');
+  workSheet.appendChild(li);
 
 
   addTask.value = '';
